@@ -21,6 +21,7 @@
 import json
 import random
 import urllib.request
+import time
 
 # Server API URLs
 QUERY = "http://localhost:8080/query?id={}"
@@ -42,7 +43,7 @@ def getDataPoint(quote):
 def getRatio(price_a, price_b):
     """ Get ratio of price_a and price_b """
     """ ------------- Update this function ------------- """
-    return 1
+    return price_a / price_b if price_b != 0 else none
 
 
 # Main
